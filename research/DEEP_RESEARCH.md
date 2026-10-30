@@ -4,6 +4,34 @@
 **Copyright:** © 2026 Sandeep Barupal. All rights reserved, except as stated below.  
 **Research status:** Detailed research draft — pehle limited integrations ke saath end-to-end test zaroori hai.
 
+## Research Overview
+
+| Item | Details |
+|---|---|
+| Product | ServiceOps |
+| Main focus | IT operations, incidents aur workflow automation |
+| Language | Aasaan Hindi + simple English |
+| Owner / Content Creator | Sandeep Barupal |
+| Copyright | © 2026 Sandeep Barupal |
+
+## Table of Contents
+
+- [1. ServiceOps kya hai?](#1-serviceops-kya-hai)
+- [2. Kiske kaam aayega?](#2-kiske-kaam-aayega)
+- [3. Similar tools se kya seekhein?](#3-similar-tools-se-kya-seekhein)
+- [4. Main features](#4-main-features)
+- [5. Pages / screens](#5-pages-screens)
+- [6. Main workflow](#6-main-workflow)
+- [7. Technical planning](#7-technical-planning)
+- [8. Security](#8-security)
+- [9. Development phases](#9-development-phases)
+- [10. Success metrics](#10-success-metrics)
+- [11. Risks](#11-risks)
+- [12. Original product idea](#12-original-product-idea)
+- [13. Sources](#13-sources)
+
+---
+
 ## 1. ServiceOps kya hai?
 ServiceOps IT support tickets, system alerts aur routine operations ko ek workflow mein connect karne ka platform ho sakta hai. Isse incident aane par alag-alag tools mein manually details dhoondhne ki zaroorat kam ho sakti hai.
 
@@ -59,3 +87,4 @@ Har incident ke liye ek page ho jahan alert, ticket, affected service, timeline,
 - [Motadata ServiceOps documentation](https://docs.motadata.com/serviceops-docs/)
 
 **Note:** ServiceOps ek broad category hai; launch se pehle product ka exact scope define karein.
+
