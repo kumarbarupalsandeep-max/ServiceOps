@@ -65,3 +65,28 @@ Risks: over-broad scope, poor CMDB data, complex customization, integration loop
 
 ## 11. Next work
 Define initial product boundary (ITSM-first versus operations-first), create a canonical data dictionary, research current plan limits, and validate cross-module user journeys before committing to all-in-one scope.
+
+## 15. Deep research addendum — evidence and product decisions
+
+### Market evidence
+ServiceNow ITSM documentation highlights incident, problem, change, request, self-service, AI assistance, and shared platform workflows. Jira Service Management exposes request, knowledge, organization, customer, and asset API resources. OpenTelemetry supplies common telemetry signals that can enrich service operations with service health and incident context. Sources: [ServiceNow ITSM](https://www.servicenow.com/docs/r/it-service-management/r_ITServiceManagement.html), [Jira Service Management API](https://developer.atlassian.com/cloud/jira/service-desk/rest/), [OpenTelemetry](https://opentelemetry.io/docs/).
+
+### Competitive implications
+ServiceOps should integrate IT service management with operational signals and automation, but avoid duplicating every feature of a mature ITSM suite. A practical first wedge is shared incident context: one operational event can create or enrich a ticket, link affected services/assets, route an owner, and preserve a timeline across tools.
+
+### Recommended core workflows
+1. Normalize events from monitoring, service desk, asset, and deployment systems.
+2. Correlate duplicate alerts into a service incident using time, topology, deployment, and tags.
+3. Open/update a ticket with severity, affected services, evidence links, and owner.
+4. Run approved automation/playbooks with permission checks, dry-run, timeout, and rollback where possible.
+5. Manage request/change/incident workflows and SLA policies.
+6. Produce post-incident reviews with timeline, contributing factors, actions, owners, and due dates.
+
+### Architecture and controls
+Separate event ingestion, correlation, workflow orchestration, ticket records, and audit history. Keep integration adapters isolated so provider API changes do not affect the core domain. Use signed webhooks, replay protection, idempotency keys, scoped credentials, retry queues, and dead-letter handling. Automation must be deny-by-default for destructive actions and require approval based on risk.
+
+### Validation and success measures
+Measure duplicate alert reduction, time to route, time to acknowledge/mitigate, automation success/rollback rate, SLA attainment, post-incident action completion, and integration failure rate. Validate one monitoring system and one ticketing system end-to-end before expanding connectors.
+
+### Sources and caveats
+ServiceOps is a broad category. Product boundary must be explicit: service desk, event management, workflow automation, and infrastructure observability each have different buyers and implementation complexity.
