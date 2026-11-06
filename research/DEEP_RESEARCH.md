@@ -88,3 +88,45 @@ Har incident ke liye ek page ho jahan alert, ticket, affected service, timeline,
 
 **Note:** ServiceOps ek broad category hai; launch se pehle product ka exact scope define karein.
 
+
+
+## 14. Competitor reference research — PagerDuty aur ServiceNow ITOM
+
+### Reference URLs
+- PagerDuty: https://www.pagerduty.com/
+- PagerDuty documentation: https://docs.pagerduty.com/
+- PagerDuty incident management: https://docs.pagerduty.com/incident-management/
+- ServiceNow ITOM: https://www.servicenow.com/products/it-operations-management.html
+
+### PagerDuty se kya samajh aata hai?
+PagerDuty incident lifecycle ko service directory, on-call schedules, escalation policies, notifications, event orchestration, incident workflows aur post-incident analysis se connect karta hai. APIs, webhooks, SDKs aur integrations operations toolchain ko extend karte hain.
+
+### ServiceNow ITOM se kya samajh aata hai?
+ITOM ka focus IT infrastructure aur services ki visibility, discovery, service mapping, event management aur operational workflows par hota hai. ITSM records ke saath ITOM signals connect karne se service impact samajhna aasaan hota hai.
+
+### Pages / feature map
+1. Operations overview
+2. Service portfolio / service directory
+3. Service dependency map
+4. Event and alert inbox
+5. Incident command center
+6. On-call schedules and rotations
+7. Escalation policies
+8. Change calendar and change risk
+9. Runbooks and automation workflows
+10. Post-incident review / postmortem
+11. Service health and SLA/SLO reports
+12. Integrations, users, roles and audit
+
+### Important workflow
+Monitoring event → normalize/deduplicate → impacted service identify → incident create/merge → on-call responder notify → escalation → response actions/runbook → stakeholder updates → resolve → postmortem and follow-up tasks.
+
+### Original ServiceOps direction
+PagerDuty ke response coordination aur ServiceNow ITOM ke service context se learning lein. ServiceOps ko ITDesk aur OpsWatch ke beech operational bridge banayein: ticket, service, dependency, alert, change aur postmortem linked hon.
+
+### Design / implementation cautions
+- Alert aur incident alag entities hain; multiple alerts ek incident ka hissa ho sakte hain.
+- Automation ke destructive actions approval gates ke peeche hon.
+- On-call schedules timezone, holiday aur override support karein.
+- Change-event correlation ko confirmed root cause na dikhayein jab tak evidence na ho.
+
